@@ -44,14 +44,17 @@ $nr = [1,2,3,4,5,6,7,8,9];
 
 function tenTimes($i,$j){
   $a = ["a","b","c","d","f",'g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','z'];
-  $primul = mt_rand (0,count($a));
+  $primul = mt_rand (0,(count($a)-1));
   $b = strtoupper ($a[$primul]);
-  echo $b.mt_rand (0,$i);
+  echo $b.mt_rand (0,$i)."<br/>";
 
-$r = 0;
-while ($r <= $j) {
-echo tenTimes ($i,$r)."<br/>";
-$r++;
+
+//while ($r <= $j) {
+for ($r=0; $r < $j; $r++) {
+  echo tenTimes ($i,$r)."<br/>";
+
+
+
 }
 }
 
