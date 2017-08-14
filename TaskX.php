@@ -47,14 +47,8 @@ function tenTimes($i,$j){
   $primul = mt_rand (0,(count($a)-1));
   $b = strtoupper ($a[$primul]);
   echo $b.mt_rand (0,$i)."<br/>";
-
-
-//while ($r <= $j) {
 for ($r=0; $r < $j; $r++) {
   echo tenTimes ($i,$r)."<br/>";
-
-
-
 }
 }
 
