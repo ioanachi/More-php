@@ -38,15 +38,21 @@ echo $nr[$i].$a[I].$nr[$i].$nr[$i];
 
 $nr = [1,2,3,4,5,6,7,8,9];
 //$litere = [a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,z];
-$a = ["a","b","c","d","f",'g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','z'];
-$primul = mt_rand (0,count($a));
-$b = strtoupper ($a[$primul]);
+//$a = ["a","b","c","d","f",'g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','z'];
+//$primul = mt_rand (0,count($a));
+//$b = strtoupper ($a[$primul]);
 
-echo  $b.mt_rand (100,999);
+function tenTimes($i = 0){
+  $a = ["a","b","c","d","f",'g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','z'];
+  $primul = mt_rand (0,count($a));
+  $b = strtoupper ($a[$primul]);
+echo $b.mt_rand (100,999);
+}
 
-
-
-
-
+$a = 0;
+while ($a <= 10) {
+echo tenTimes ($a)."<br/>";
+$a++;
+}
 
  ?>
