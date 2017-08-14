@@ -42,17 +42,19 @@ $nr = [1,2,3,4,5,6,7,8,9];
 //$primul = mt_rand (0,count($a));
 //$b = strtoupper ($a[$primul]);
 
-function tenTimes($i = 0){
+function tenTimes($i,$j){
   $a = ["a","b","c","d","f",'g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','z'];
   $primul = mt_rand (0,count($a));
   $b = strtoupper ($a[$primul]);
-echo $b.mt_rand (100,999);
+  echo $b.mt_rand (0,$i);
+
+$r = 0;
+while ($r <= $j) {
+echo tenTimes ($i,$r)."<br/>";
+$r++;
+}
 }
 
-$a = 0;
-while ($a <= 10) {
-echo tenTimes ($a)."<br/>";
-$a++;
-}
+tenTimes(10,11)
 
  ?>
