@@ -1,4 +1,4 @@
-<form action="" method="GET">
+<form action="" method="POST">
   <p>
 <input type="text" name="denumire" value="">
   </p>
@@ -73,22 +73,22 @@ function tenTimes($i){
 function repeatMe($i, $j){
   for ($a=0; $a < $j; $a++) {
     tenTimes($i);
-    if (isset($_GET["denumire"]) ) {
+    if (isset($_POST["denumire"]) ) {
 
-    echo '-'.$_GET["denumire"]."<br/>";
+    echo '-'.$_POST["denumire"]."<br/>";
   }
   }
 }
 ?>
 <pre>
   <?php
-  if (isset($_GET["denumire"]) && $_GET["denumire"] != "") {
+  if (isset($_POST["denumire"]) && $_POST["denumire"] != "") {
 
   repeatMe(6,1);
 }
 else {
   echo "nothing";
 }
-
+print_r($_POST);
  ?>
 </pre>
