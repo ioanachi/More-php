@@ -7,6 +7,9 @@
   </p>
 </form>
 <?php
+
+
+
 /*
 Pas 1:
 Fa un prgram (un fisier PHP) pe care de fiecare data cand il incarci sa genereze un numar random din 3 numere (ex: 592)
@@ -70,12 +73,22 @@ function tenTimes($i){
 function repeatMe($i, $j){
   for ($a=0; $a < $j; $a++) {
     tenTimes($i);
-    echo "<br/>";
+    if (isset($_GET["denumire"]) ) {
+
+    echo '-'.$_GET["denumire"]."<br/>";
+  }
   }
 }
 ?>
 <pre>
   <?php
-repeatMe(6,1);
+  if (isset($_GET["denumire"]) && $_GET["denumire"] != "") {
+
+  repeatMe(6,1);
+}
+else {
+  echo "nothing";
+}
+
  ?>
 </pre>
