@@ -1,3 +1,11 @@
+<form action="" method="GET">
+  <p>
+<input type="text" name="denumire" value="">
+  </p>
+  <p>
+    <input type="submit" name="generate" value="Genereaza!">
+  </p>
+</form>
 <?php
 /*
 Pas 1:
@@ -65,6 +73,9 @@ function repeatMe($i, $j){
     echo "<br/>";
   }
 }
-repeatMe(10,6);
-
+?>
+<pre>
+  <?php
+repeatMe(6,1);
  ?>
+</pre>
