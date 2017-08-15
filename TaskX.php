@@ -46,9 +46,9 @@ function tenTimes($i){
   $a = ["a","b","c","d","f",'g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','z'];
   $primul = mt_rand (0,(count($a)-1));
   $b = strtoupper ($a[$primul]);
-  echo $b;
+
   for ($r=0; $r < $i; $r++) {
-    echo mt_rand(0,9);
+    echo mt_rand(0,9).$b;
 
     // echo tenTimes ($i,$r)."<br/>";
   }
