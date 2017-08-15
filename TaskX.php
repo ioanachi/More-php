@@ -1,4 +1,15 @@
+<form action="" method="POST">
+  <p>
+<input type="text" name="denumire" value="">
+  </p>
+  <p>
+    <input type="submit" name="generate" value="Genereaza!">
+  </p>
+</form>
 <?php
+
+
+
 /*
 Pas 1:
 Fa un prgram (un fisier PHP) pe care de fiecare data cand il incarci sa genereze un numar random din 3 numere (ex: 592)
@@ -62,9 +73,22 @@ function tenTimes($i){
 function repeatMe($i, $j){
   for ($a=0; $a < $j; $a++) {
     tenTimes($i);
-    echo "<br/>";
+    if (isset($_POST["denumire"]) ) {
+
+    echo '-'.$_POST["denumire"]."<br/>";
+  }
   }
 }
-repeatMe(10,6);
+?>
+<pre>
+  <?php
+  if (isset($_POST["denumire"]) && $_POST["denumire"] != "") {
 
+  repeatMe(6,1);
+}
+else {
+  echo "nothing";
+}
+print_r($_POST);
  ?>
+</pre>
