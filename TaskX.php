@@ -46,10 +46,16 @@ function tenTimes($i){
   $a = ["a","b","c","d","f",'g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','z'];
   $primul = mt_rand (0,(count($a)-1));
   $b = strtoupper ($a[$primul]);
-
+  $w = mt_rand (0,$i);
   for ($r=0; $r < $i; $r++) {
-    echo mt_rand(0,9).$b;
+    if ($w == $r) {
+      echo $b;
+    }
 
+      else {
+
+    echo mt_rand(0,9);
+      }
     // echo tenTimes ($i,$r)."<br/>";
   }
 }
@@ -59,6 +65,6 @@ function repeatMe($i, $j){
     echo "<br/>";
   }
 }
-repeatMe(2,2);
+repeatMe(10,6);
 
  ?>
